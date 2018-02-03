@@ -64,7 +64,7 @@
 // 20120307 - 2012-03-07aRagexeRE+ - 0x970
 
 #ifndef PACKETVER
-	#define PACKETVER 20141022
+	#define PACKETVER 20150513
 #endif // PACKETVER
 
 //Uncomment the following line if your client is ragexeRE instead of ragexe (required because of conflicting packets in ragexe vs ragexeRE).
@@ -498,7 +498,15 @@ struct status_change_data {
 	int tick;                   ///< Remaining duration.
 };
 
+/* Hercules Ultimate Storage System [Smokexyz/Hercules] */
+struct storage_settings {
+	int uid;                       ///< Storage Identifier.
+	char name[NAME_LENGTH];        ///< Storage Name
+	int capacity;                  ///< Item Capacity.
+};
+
 struct storage_data {
+	int uid;                       ///< Storage Identifier.
 	bool save;                     ///< save flag.
 	bool received;                 ///< received flag.
 	int aggregate;                 ///< total item count.
